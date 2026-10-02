@@ -1,0 +1,37 @@
+html { scroll-behavior: smooth; }
+body { font-family: 'Pretendard Variable', Pretendard, system-ui, sans-serif; }
+section[id] { scroll-margin-top: 4rem; }
+
+.section-title {
+  margin-bottom: 2rem;
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+.dark .section-title { color: #fff; }
+
+.nav-link { color: #64748b; transition: color .2s; }
+.nav-link:hover, .nav-link.active { color: #2563eb; }
+.dark .nav-link:hover, .dark .nav-link.active { color: #60a5fa; }
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .8rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: .75rem;
+  font-weight: 600;
+  transition: background .2s, transform .2s;
+}
+.contact-btn:hover { background: #f1f5f9; transform: translateY(-2px); }
+.dark .contact-btn { border-color: #334155; }
+.dark .contact-btn:hover { background: #1e293b; }
+
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
